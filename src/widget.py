@@ -8,4 +8,6 @@ def mask_account_card(payment_info: str, card_number: str) -> str:
     else:
         return get_mask_account(card_number)
 
+
 def get_date(date: str) -> str:
+    return date[8:10] + "." + date[5:7] + "." + date[:4]
