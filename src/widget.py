@@ -3,6 +3,7 @@ from src.masks import get_mask_account
 
 
 def mask_account_card(payment_info: str, card_number: str) -> str:
+    """ Функция маскировки номера счетов """
     if payment_info == "Visa Platinum" or "Maestro":
         return get_mask_card_number(card_number)
     else:
@@ -10,4 +11,5 @@ def mask_account_card(payment_info: str, card_number: str) -> str:
 
 
 def get_date(date: str) -> str:
+    """ Функция записи коректной даты """
     return date[8:10] + "." + date[5:7] + "." + date[:4]
