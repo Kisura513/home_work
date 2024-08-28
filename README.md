@@ -9,6 +9,7 @@ Home_work - это веб-приложение на Python для маскиро
 1. Клонируйте репозиторий:
 ```
 git clone https://github.com/Kisura513/home_work
+```
 
 ## Использование:
 
