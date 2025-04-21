@@ -13,7 +13,6 @@ def mask_account_card(payment_info: str) -> str:
     for number in parts:
         if number.isdigit():
             card_account += number
-
     if parts[0].lower() == 'счет':
         return payment_info[:4] + " " + get_mask_account(card_account)
     elif len(card_account) == 16:
@@ -23,8 +22,4 @@ def mask_account_card(payment_info: str) -> str:
 def get_date(date: str) -> str:
     """ Функция записи коректной даты """
     return date[8:10] + "." + date[5:7] + "." + date[:4]
-
-
-print(mask_account_card('Счет 12345678901234567890'))
-print(mask_account_card('Visa Super 1234567890123456'))
-print(mask_account_card('Visa Super Puper Mega Big Card Name 1234567890123456'))
+print(get_date("2018-10-14T08:21:33.419441"))
