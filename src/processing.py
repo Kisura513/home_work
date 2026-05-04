@@ -1,7 +1,7 @@
-from typing import List, Any
+from typing import Any
 
 
-def filter_by_state(list_id: list, state="EXECUTED") -> list[Any]:
+def filter_by_state(list_id: list, state) -> list[Any]:
     """ Функция фильтрации списка по значению state """
     state_new_list = []
     for info in list_id:

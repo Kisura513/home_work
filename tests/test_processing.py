@@ -1,5 +1,4 @@
 import pytest
-
 from src.processing import filter_by_state
 
 
@@ -17,6 +16,5 @@ def list_info_canceled():
             {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]
 
 
-@pytest.mark.parametrize("test_list, state, result_list", [list_info, "CANCELED", list_info_canceled])
-def test_filter_by_state(test_list, state, result_list):
-    assert filter_by_state(test_list, state) == result_list
+def test_filter_by_state(list_info, list_info_canceled):
+    assert filter_by_state(list_info, state='CANCELED') == list_info_canceled
